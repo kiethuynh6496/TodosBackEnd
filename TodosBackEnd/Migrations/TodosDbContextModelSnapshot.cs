@@ -50,6 +50,12 @@ namespace TodosBackEnd.Migrations
                             Id = 2,
                             IsComplete = false,
                             Name = "Nhiệm vụ 2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            IsComplete = false,
+                            Name = "Nhiệm vụ 3"
                         });
                 });
 #pragma warning restore 612, 618

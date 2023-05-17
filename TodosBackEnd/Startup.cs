@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TodosBackEnd.Data;
 using TodosBackEnd.Service.Todos;
 
 namespace TodosBackEnd
@@ -32,6 +34,10 @@ namespace TodosBackEnd
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TodosBackEnd", Version = "v1" });
+            });
+            services.AddDbContext<TodosDbContext>(option =>
+            {
+                option.UseSqlServer(Configuration.GetConnectionString("TodosDatabase"));
             });
             services.AddTransient<ITodosService, TodosService>();
         }

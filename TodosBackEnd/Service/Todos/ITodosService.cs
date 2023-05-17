@@ -11,6 +11,6 @@ namespace TodosBackEnd.Service.Todos
         List<Todo> GetTodos();
         Boolean AddTodo(Todo todo);
         Boolean UpdateTodo(Todo todo);
-        Boolean DelTodo(Todo todo);
+        Boolean DelTodo(int id);
     }
 }

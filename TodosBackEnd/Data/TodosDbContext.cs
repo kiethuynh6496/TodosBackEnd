@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TodosBackEnd.Seeders;
+using TodosBackEnd.Models;
 
 namespace TodosBackEnd.Data
 {
@@ -19,5 +20,7 @@ namespace TodosBackEnd.Data
             modelBuilder.ApplyConfiguration(new TodoConfiguration());
             modelBuilder.Seed();
         }
+
+        public DbSet<Todo> Todos { get; set; }
     }
 }

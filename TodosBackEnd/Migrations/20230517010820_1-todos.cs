@@ -2,7 +2,7 @@
 
 namespace TodosBackEnd.Migrations
 {
-    public partial class inittodos : Migration
+    public partial class _1todos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,6 +19,21 @@ namespace TodosBackEnd.Migrations
                 {
                     table.PrimaryKey("PK_todos", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "todos",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Nhiệm vụ 1" });
+
+            migrationBuilder.InsertData(
+                table: "todos",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 2, "Nhiệm vụ 2" });
+
+            migrationBuilder.InsertData(
+                table: "todos",
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 3, "Nhiệm vụ 3" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
