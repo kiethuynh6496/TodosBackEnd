@@ -9,8 +9,8 @@ using TodosBackEnd.Data;
 namespace TodosBackEnd.Migrations
 {
     [DbContext(typeof(TodosDbContext))]
-    [Migration("20230517010820_1-todos")]
-    partial class _1todos
+    [Migration("20230517051928_init-todos")]
+    partial class inittodos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

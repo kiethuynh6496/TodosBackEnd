@@ -2,7 +2,7 @@
 
 namespace TodosBackEnd.Migrations
 {
-    public partial class _1todos : Migration
+    public partial class inittodos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

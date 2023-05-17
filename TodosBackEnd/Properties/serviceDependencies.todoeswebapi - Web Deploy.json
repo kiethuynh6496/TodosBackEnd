@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/TodosBackEndapi/apis/TodosBackEnd",
+      "type": "apis.azure",
+      "apiEndpoint": "https://todosbackendapi.azure-api.net/"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/todoes-web-api/databases/TodosDB",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:TodosDatabase",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
